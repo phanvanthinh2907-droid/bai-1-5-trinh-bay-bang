@@ -1,0 +1,57 @@
+/* ===== Bài 1.5 - Trình bày bảng ===== */
+body {
+  font-family: "Times New Roman", serif;
+  margin: 16px;
+  color: #222;
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: #1e4f8a;
+}
+
+/* Bảng rộng hơn màn hình điện thoại thì cuộn ngang thay vì vỡ giao diện */
+.bang-cuon {
+  overflow-x: auto;
+}
+
+.bang-hoc-phan {
+  border-collapse: collapse; /* gộp 2 đường viền kề nhau thành 1 */
+  min-width: 640px;
+}
+
+.bang-hoc-phan caption {
+  text-align: left;
+  font-weight: bold;
+  padding-bottom: 4px;
+}
+
+.bang-hoc-phan th,
+.bang-hoc-phan td {
+  border: 1px solid #555;
+  padding: 4px 8px;
+}
+
+.bang-hoc-phan th {
+  background: #1e4f8a;
+  color: #fff;
+}
+
+/* Cột số tín chỉ canh phải cho dễ so sánh */
+.bang-hoc-phan .so {
+  text-align: right;
+}
+
+/* Phân biệt dòng chẵn, dòng lẻ bằng 2 màu nền (theo chú ý của đề) */
+.bang-hoc-phan tbody tr:nth-child(odd) {
+  background: #ffffff;
+}
+
+.bang-hoc-phan tbody tr:nth-child(even) {
+  background: #e3eef9;
+}
+
+/* Rê chuột vào dòng nào thì dòng đó đổi màu */
+.bang-hoc-phan tbody tr:hover {
+  background: #fff3c4;
+}
